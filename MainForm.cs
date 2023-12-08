@@ -23,33 +23,7 @@ namespace SortVisualizer
 
         private void SetSort()
         {
-            switch(algorithmComboBox.SelectedIndex)
-            {
-                case 0:
-                    engine = new BubbleSortEngine();
-                    break;
-                case 1:
-                    engine = new SelectionSortEngine();
-                    break;
-                case 2:
-                    engine = new InsertionSortEngine();
-                    break;
-                case 3:
-                    engine = new RadixSortEngine();
-                    break;
-                case 4:
-                    engine = new BogoSortEngine();
-                    break;
-                case 5:
-                    engine = new SlowSortEngine();
-                    break;
-                case 6:
-                    engine = new DropSortEngine();
-                    break;
-                case 7:
-                    engine = new QuickSortEngine();
-                    break;
-            }
+            engine = SortFactory.LoadSort(algorithmComboBox.SelectedIndex);
             engine.SetDelay(delay);
         }
 
