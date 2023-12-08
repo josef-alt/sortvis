@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SortVisualizer
@@ -70,13 +65,8 @@ namespace SortVisualizer
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            if(worker != null)
-            Console.WriteLine(worker.IsAlive);
             if (worker != null && worker.IsAlive)
-            {
                 worker.Abort();
-                Console.WriteLine("aborting");
-            }
             sortButton.Text = "Sort";
 
             SetSort();
@@ -95,7 +85,6 @@ namespace SortVisualizer
 
         private void sortButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Clicked", sortButton.Text);
             switch(sortButton.Text)
             {
                 case "Sort":
@@ -123,13 +112,11 @@ namespace SortVisualizer
                     engine.Toggle(false);
                     sortButton.Text = "Pause";
                     break;
-            }
-            
+            }            
         }
 
         private void algorithmComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine("Selected", algorithmComboBox.SelectedIndex);
             SetSort();
         }
 
