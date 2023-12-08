@@ -8,11 +8,11 @@ namespace SortVisualizer
 {
     public partial class MainForm : Form
     {
-        int[] array;
-        int delay;
-        Graphics g;
-        Thread worker;
-        ISortEngine engine;
+        private int[] array;
+        private int delay;
+        private Graphics g;
+        private Thread worker;
+        private ISortEngine engine;
 
         public MainForm()
         {
