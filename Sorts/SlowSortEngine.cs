@@ -19,6 +19,8 @@ namespace SortVisualizer
         {
             if (low >= high)
                 return;
+
+            ev.WaitOne();
             int mid = low + (high - low) / 2;
             SlowSort(low, mid);
             SlowSort(mid + 1, high);
