@@ -46,6 +46,9 @@ namespace SortVisualizer
                 case 6:
                     engine = new DropSortEngine();
                     break;
+                case 7:
+                    engine = new QuickSortEngine();
+                    break;
             }
             engine.SetDelay(delay);
         }

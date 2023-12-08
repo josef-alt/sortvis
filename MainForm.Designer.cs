@@ -58,7 +58,8 @@ namespace SortVisualizer
             "Radix Sort",
             "Bogo Sort",
             "Slow Sort",
-            "Drop Sort"});
+            "Drop Sort",
+            "Quick Sort"});
             this.algorithmComboBox.Location = new System.Drawing.Point(68, 6);
             this.algorithmComboBox.Name = "algorithmComboBox";
             this.algorithmComboBox.Size = new System.Drawing.Size(121, 21);
