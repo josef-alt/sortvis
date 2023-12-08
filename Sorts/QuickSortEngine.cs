@@ -19,6 +19,7 @@ namespace SortVisualizer
             if (low >= high)
                 return;
 
+            ev.WaitOne();
             int pivot = Partition(low, high);
             QuickSort(low, pivot - 1);
             QuickSort(pivot + 1, high);

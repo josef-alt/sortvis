@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SortFactory.cs" />
     <Compile Include="Sorts\BogoSortEngine.cs" />
     <Compile Include="Sorts\BubbleSortEngine.cs" />
     <Compile Include="MainForm.cs">

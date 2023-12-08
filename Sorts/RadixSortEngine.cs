@@ -12,6 +12,7 @@ namespace SortVisualizer
             int max_radix = (int)Math.Log10(MaxEntry) + 1;
             for(int radix = 0; radix < max_radix; ++radix)
             {
+                ev.WaitOne();
                 List<List<int>> buckets = new List<List<int>>(10);
                 for (int m = 0; m < 10; ++m)
                     buckets.Add(new List<int>());
