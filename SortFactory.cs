@@ -22,6 +22,8 @@
                     return new DropSortEngine();
                 case 7:
                     return new QuickSortEngine();
+                case 8:
+                    return new MergeSortEngine();
             }
             return new BubbleSortEngine();
         }
